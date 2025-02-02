@@ -1,0 +1,49 @@
+{
+  "name": "json2ts",
+  "version": "1.0.0",
+  "description": "Converter JSON to TypeScript Interfaces",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DitzDev/json2ts.git"
+  },
+  "keywords": [
+    "converter",
+    "typescrpt",
+    "json",
+    "javascript"
+  ],
+  "author": "DitzDev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DitzDev/json2ts/issues"
+  },
+  "homepage": "https://github.com/DitzDev/json2ts#readme",
+  "dependencies": {
+    "callsites": "^4.0.0",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "tsup": "^8.0.0",
+    "jest": "^29.0.0"
+  }
+}
