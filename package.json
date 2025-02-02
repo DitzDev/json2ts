@@ -1,5 +1,5 @@
 {
-  "name": "json2ts",
+  "name": "jsonts-flash",
   "version": "1.0.0",
   "description": "Converter JSON to TypeScript Interfaces",
   "main": "dist/index.js",
